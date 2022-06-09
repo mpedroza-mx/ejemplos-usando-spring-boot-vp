@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.aprendiendo.spring: INFO
