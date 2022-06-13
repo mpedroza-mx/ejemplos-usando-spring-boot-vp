@@ -1,0 +1,7 @@
+server:
+  port: 8080
+solr:
+  cliente:
+    url: http://localhost:8983/solr/paises
+
+

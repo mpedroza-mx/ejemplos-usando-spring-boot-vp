@@ -1,0 +1,23 @@
+<dataConfig>
+	<dataSource type="JdbcDataSource"
+		driver="org.postgresql.Driver"
+		url="jdbc:postgresql://localhost:5432/paises"
+		user="root"
+		password="root"/>
+	<document>
+		<entity name="pais"
+			query="SELECT * FROM pais"
+			deltaQuery="SELECT id FROM pais WHERE fecha_actualizacion > TO_TIMESTAMP('${dih.last_index_time}', 'YYYY-MM-DD HH24:MI:SS')"
+			deletedPkQuery="SELECT pais_id as id FROM historial_pais_eliminado WHERE fecha_eliminacion > TO_TIMESTAMP('${dih.last_index_time}', 'YYYY-MM-DD HH24:MI:SS')"
+			processor="SqlEntityProcessor"
+			pk="id">
+			<field column="id" name="id"/>
+			<field column="nombre" name="nombre" />
+			<field column="capital" name="capital" />
+			<field column="poblacion" name="poblacion"/>
+			<field column="lenguaje" name="lenguaje"/>
+			<field column="fecha_creacion" name="fechaCreacion"/>
+			<field column="fecha_actualizacion" name="fechaActualizacion"/>
+		</entity>
+	</document>
+</dataConfig>
