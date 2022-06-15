@@ -11,7 +11,7 @@
 * Agregar al ${solr.install.dir}\server\solr\paises\conf\solrconfig.xml esto
 ```text
   <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-dataimporthandler-.*\.jar" />
-  <lib dir="${solr.install.dir:../../../..}/dist/" regex="postgresql-42.3.6.jar" />
+  <lib dir="${solr.install.dir:../../../..}/dist/" regex="postgresql-42.4.0.jar" />
   
   <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
     <lst name="defaults">
