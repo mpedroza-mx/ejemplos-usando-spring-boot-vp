@@ -1,15 +1,6 @@
 spring:
   application:
     name: spring-boot-consul-ejemplo
-  datasource:
-    url: ${spring.datasource.url}
-  jpa:
-    hibernate:
-      ddl-auto: ${spring.jpa.hibernate.ddl-auto}
-    properties:
-      hibernate:
-        dialect: ${spring.jpa.properties.hibernate.dialect}
-        show-sql: ${spring.jpa.properties.hibernate.show-sql}
   config:
     import: consul:localhost:8500
   cloud:
